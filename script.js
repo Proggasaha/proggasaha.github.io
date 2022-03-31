@@ -51,9 +51,9 @@ var btn = document.getElementById('submit-btn');
 
             Email.send({
                     Host : "smtp.gmail.com",
-                    Username : "hasiburnafiz17@gmail.com",
-                    Password : "qzowxtmbdqbnvlpp",
-                    To : 'hasiburnafiz17@gmail.com',
+                    Username : "proggasaha005@gmail.com",
+                    Password : "ihgqnipuhyrjonyk",
+                    To : 'progga-2018223976@ling.du.ac.bd',
                     From : email,
                     Subject : "New Contact Form Enquiry",
                     Body : body
