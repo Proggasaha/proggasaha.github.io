@@ -37,7 +37,6 @@ function setTheme(mode) {
 }
 
 
-
 // make contact form working 
 
 var btn = document.getElementById('submit-btn');
@@ -58,6 +57,16 @@ var btn = document.getElementById('submit-btn');
                     Subject : "New Contact Form Enquiry",
                     Body : body
                 }).then(
-                        message => alert(message)
+                        message =>{
+                            if(message === "OK"){
+                                 var confirmationMsz = document.getElementsByClassName('confirmation')[0];
+                                 confirmationMsz.style.display = "block";
+                                 setTimeout(() => {
+                                    confirmationMsz.style.display = "none";
+                                }, 5000);
+                            }else{
+                                alert(message)
+                            }
+                        } 
                     );
         })    
