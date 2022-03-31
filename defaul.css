@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6, strong{
 }
 
 p, li, span, label, input, textarea{
+    color: var(--secondaryText);
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
 }
@@ -49,7 +50,20 @@ h4{ font-size: 24px;}
 h5{ font-size: 20px;}
 h6{ font-size: 16px;}
 
-
+.textBlock{
+    padding: 10px;
+    margin: 5px;
+    background: blue;
+    width: fit-content;
+    color: #fff;
+    border: 1px solid blue;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+.textBlock:hover{
+    background-color: transparent;
+    color: blue;
+}
 .s1{
     background-color: var(--mainColor);
     border-bottom: var(--borderColor);
@@ -214,6 +228,7 @@ h6{ font-size: 16px;}
     padding: 15px;
     position: relative;
 }
+
 .corner{
     width: 7px;
     height: 7px;
@@ -246,6 +261,7 @@ h6{ font-size: 16px;}
     padding-bottom: 50px;
     gap: 100px;
 }
+
 #skills{
     display: flex;
     justify-content: space-evenly;
@@ -282,6 +298,19 @@ h6{ font-size: 16px;}
 .post-preview{
     background-color: #fff;
     padding: 15px;
+}
+.post-preview a {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: blue;
+    border: none;
+    box-shadow: 1px 0px 2px 1px #c1c1c9;
+    transition: all .5s ease;
+}
+.post-preview a:hover{
+    background: blue;
+    color: #fff;
 }
 .post-title{
     color: black;
@@ -324,7 +353,15 @@ h6{ font-size: 16px;}
     background-color: var(--btnColor);
     border: none;
 }
+.confirmation {
+    margin: 5px auto;
+    width: auto;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: all .4s ease;
+}
 
+ /* responsive design  */
 @media screen and (max-width: 1200px){
     .main-container{
         width: 95%;
@@ -339,8 +376,36 @@ h6{ font-size: 16px;}
                     'left-column' 
                     'right-column'
          ; 
+         grid-gap: 0;
+    }
+    .greeting-wrapper h1{
+        font-size: 45px;
     }
     .right-column{
         justify-content: center;
     }
+    #preview{
+        padding: 8px;
+    }
+    .right-column h3{
+        margin: 0px;
+    }
+    .right-column p{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .greeting-wrapper h1{
+        font-size: 35px;
+    }
+    #preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+	#preview{
+		width: 270px;
+	}
 }
