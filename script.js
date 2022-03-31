@@ -53,13 +53,11 @@ var btn = document.getElementById('submit-btn');
                     Host : "smtp.gmail.com",
                     Username : "proggasaha005@gmail.com",
                     Password : "ihgqnipuhyrjonyk",
-                    To : 'progga-2018223976@ling.du.ac.bd',
+                    To : 'proggasaha005@gmail.com',
                     From : email,
                     Subject : "New Contact Form Enquiry",
                     Body : body
                 }).then(
-                        message => {
-                            document.getElementsByClassName('confirmation').style.display = 'block';
-                        }
+                        message => alert(message)
                     );
         })    
